@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="3つの質問で性格診断ができるアンケートアプリです。休日の過ごし方や問題への対処法からあなたの性格タイプを診断しましょう！">
+    <meta name="keywords" content="性格診断,アンケート,心理テスト,性格タイプ">
+    <meta name="author" content="性格診断アプリ">
+    <meta property="og:title" content="性格診断アンケート">
+    <meta property="og:description" content="3つの質問で性格診断ができるアンケートアプリです">
+    <meta property="og:type" content="website">
+    <title>性格診断アンケート</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>">
+</head>
+<body>
+    <div class="container">
+        <h1>性格診断アンケート</h1>
+        <p class="description">3つの質問に答えて、あなたの性格タイプを診断しましょう！</p>
+        
+        <div id="quiz-container">
+            <div id="question-container">
+                <h2 id="question-title">質問1</h2>
+                <p id="question-text">休日はどのように過ごすのが好きですか？</p>
+                <div class="options">
+                    <button class="option-btn" data-value="A">A. 家でゆっくり過ごす</button>
+                    <button class="option-btn" data-value="B">B. 友達と遊びに行く</button>
+                    <button class="option-btn" data-value="C">C. 新しい場所を探検する</button>
+                    <button class="option-btn" data-value="D">D. 趣味に没頭する</button>
+                </div>
+            </div>
+            
+            <div id="progress-container">
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+                <p id="progress-text">1 / 3</p>
+            </div>
+        </div>
+        
+        <div id="result-container" style="display: none;">
+            <h2>診断結果</h2>
+            <div id="result-content">
+                <h3 id="personality-title"></h3>
+                <p id="personality-description"></p>
+                <div id="personality-traits"></div>
+            </div>
+            <button id="restart-btn" class="restart-btn">もう一度診断する</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
